@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cães Desaparecidos</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>🐾 Cães Desaparecidos</h1>
+
+  <!-- Login -->
+  <div id="loginBox" class="box">
+    <h2>Login</h2>
+    <input type="text" id="usuario" placeholder="Usuário" autocomplete="username" />
+    <input type="password" id="senha" placeholder="Senha" autocomplete="current-password" />
+    <button onclick="fazerLogin()">Entrar</button>
+    <p>Não tem conta? <a href="#" onclick="mostrarCadastro()">Cadastre-se aqui</a></p>
+  </div>
+
+  <!-- Cadastro -->
+  <div id="cadastroBox" class="box" style="display:none;">
+    <h2>Cadastro</h2>
+    <input type="text" id="novoUsuario" placeholder="Novo usuário" autocomplete="username" />
+    <input type="password" id="novaSenha" placeholder="Nova senha" autocomplete="new-password" />
+    <button onclick="fazerCadastro()">Cadastrar</button>
+    <p>Já tem conta? <a href="#" onclick="mostrarLogin()">Voltar ao login</a></p>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <div id="conteudoPrincipal" style="display:none;">
+    <!-- Menu -->
+    <div class="menu-container">
+      <button onclick="toggleMenu()" class="menu-button">☰ Menu</button>
+      <div id="menuDropdown" class="menu-dropdown" style="display:none;">
+        <button onclick="voltarInicio()">Início</button>
+        <button onclick="abrirConfiguracoes()">Configurações</button>
+        <button onclick="fazerLogout()">Sair</button>
+      </div>
+    </div>
+
+    <!-- Publicação estilo LinkedIn -->
+    <section id="inicioPublicacao" class="form">
+      <div onclick="abrirPublicacao()" style="cursor:pointer;">
+        <input type="text" placeholder="Sobre o que você quer falar?" readonly />
+      </div>
+      <div id="publicacaoForm" style="display:none; margin-top:15px;">
+        <form id="cadastroCaoForm" onsubmit="event.preventDefault(); cadastrarCao();">
+          <div class="form-row">
+            <label>Nome:
+              <input type="text" id="nome" required />
+            </label>
+            <label>Idade:
+              <input type="number" id="idade" min="0" required />
+            </label>
+          </div>
+          <label>Descrição:
+            <textarea id="descricao" rows="3" required></textarea>
+          </label>
+          <label>Características:
+            <input type="text" id="caracteristicas" />
+          </label>
+          <label>Sexo:
+            <select id="sexo" required>
+              <option value="" disabled selected>Selecione</option>
+              <option value="Macho">Macho</option>
+              <option value="Fêmea">Fêmea</option>
+            </select>
+          </label>
+          <div class="form-row">
+            <label>Localização:
+              <input type="text" id="localizacao" required />
+            </label>
+            <label>Imagem (URL):
+              <input type="url" id="imagem" required />
+            </label>
+          </div>
+          <label>Recompensa (opcional):
+            <input type="text" id="recompensa" />
+          </label>
+          <button type="submit">Cadastrar</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Lista de cães -->
+    <section class="dog-list form">
+      <h2>Cães Desaparecidos</h2>
+      <div id="listaCaes"></div>
+    </section>
+
+    <!-- Configurações do Perfil -->
+    <section id="configuracoes" style="display:none;" class="form">
+      <h2>Configurações do Perfil</h2>
+      <form id="perfilForm" onsubmit="event.preventDefault(); salvarPerfil();">
+        <label>Nome:
+          <input type="text" id="perfilNome" />
+        </label>
+        <label>Email:
+          <input type="email" id="perfilEmail" />
+        </label>
+        <label>Telefone:
+          <input type="tel" id="perfilTelefone" />
+        </label>
+        <button type="submit">Salvar Perfil</button>
+      </form>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

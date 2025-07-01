@@ -1,0 +1,174 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #fbe3e8, #f6e9d7);
+  margin: 0;
+  padding: 20px;
+  color: #333;
+  transition: background 0.6s ease;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4a3f35;
+}
+
+.box {
+  background-color: white;
+  max-width: 400px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+input, textarea, select, button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+button {
+  background-color: #e48b99;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #cc6d7f;
+  transform: scale(1.03);
+}
+
+a {
+  color: #cc6d7f;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.form {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  transition: opacity 0.4s ease;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-row label {
+  flex: 1;
+  min-width: 150px;
+}
+
+.dog-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.dog-card {
+  background-color: #fff;
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  border-left: 5px solid #e48b99;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.dog-card-header {
+  display: flex;
+  gap: 15px;
+}
+
+.dog-card-header img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.dog-card-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.dog-card-actions button {
+  flex: 1;
+}
+
+.recompensa {
+  color: green;
+  font-weight: bold;
+}
+
+.sexo {
+  font-weight: normal;
+  font-size: 0.9em;
+  color: #666;
+}
+
+.dog-card-locais {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Menu */
+.menu-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.menu-button {
+  background-color: #ffffff;
+  color: #333;
+  padding: 10px 15px;
+  font-weight: bold;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.menu-dropdown {
+  position: absolute;
+  left: 0;
+  top: 110%;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.menu-dropdown button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+}
+
+.menu-dropdown button:hover {
+  background-color: #f1f1f1;
+}
